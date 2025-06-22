@@ -24,10 +24,11 @@ void DELETIONatTARGET(Node* &head,int target) {
         delete head;
     }
     int i = 0;
-    while (temp!=NULL && temp->next!=NULL) {
+    while (temp!=NULL && i<target-1) {
         temp = temp->next;
         i++;
     }
+    if (temp==nullptr || temp->next==nullptr) return;
     Node* to_delete = temp->next;
     temp->next=temp->next->next;
     delete to_delete;
