@@ -1,10 +1,33 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Editor-based HTTP Client requests
+# 💻 CLion & IntelliJ stuff
+.idea/
+.shelf/
+workspace.xml
 /httpRequests/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
+dataSources/
+dataSources.local.xml
+
+# 💥 Ignore build directories
+cmake-build-debug/
+cmake-build-release/
+cmake-build-*
+
+# 🚫 Ignore compiled files & binaries
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.bin
+
+# 📁 Ignore generated folders
 LinkedList/
 Array/
+
+# 📃 Misc
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
