@@ -1,3 +1,3 @@
-//
-// Created by Agaru on 6/30/2025.
-//
+front = temp->next;
+temp->next = front->next;
+temp->next->next;
