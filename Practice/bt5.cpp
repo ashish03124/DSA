@@ -1,25 +1,23 @@
 //
 // Created by Agaru on 7/1/2025.
 //
-// TIME COMPLEXITY -> O(N)
 #include <bits/stdc++.h>
 using namespace std;
 struct Node {
-public:
     int data;
+    Node* next;
     Node* left;
     Node* right;
     Node(int val) {
-        data = val;
+        next = nullptr;
         left = nullptr;
-        right = nullptr;
+        right  = nullptr;
     }
 };
-void preorder(Node* root){
-    if (root==nullptr) return;
-    cout << root->data << " -> ";
-    preorder(root->left);
-    preorder(root->right);
+void levelWise(Node* root) {
+    vector<vector<int>> and;
+    queue<int> Q;
+
 }
 int main() {
     struct Node* root = new Node(1);
@@ -29,9 +27,5 @@ int main() {
     root->left->right = new Node(5);
     root->right->left = new Node(6);
     root->right->right = new Node(7);
-    preorder(root);
-    cout << "null";
-
-
 
 }
