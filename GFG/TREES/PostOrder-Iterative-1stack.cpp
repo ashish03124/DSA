@@ -18,25 +18,35 @@ public:
 };
 vector<int> postOrder(Node* root) {
     vector<int> result;
-    if (!root) return result;
-    stack<Node*> st1;
-    st1.push(root);
-    stack<Node*> st2;
+    Node* curr = (root);
+    stack<Node*> st;
+    while (curr || !st.empty()) {
+        if (curr) {
+            st.push(curr);
+            curr=curr->left;
+        }
+        else {
+            Node* temp = st.top()->right;
+            if (!temp) {
+                temp = st.top();
+                st.pop();
+                result.push_back(temp->data);
+                while (!st.empty() && temp == st.top()->right) {
+                    temp = st.top();
+                    st.pop();
+                    result.push_back(temp->data);
+                }
+            }
+                else {
+                    curr = temp;
+                }
 
-    while (!st1.empty()) {
-        root = st1.top();
-        st1.pop();
-        st2.push(root);
-        if (root->left) st1.push(root->left);
-        if (root->right) st1.push(root->right);
-    }
-    while (!st2.empty()) {
-        result.push_back(st2.top()->data);
-        st2.pop();
+        }
     }
     return result;
-
 }
+
+
 int main() {
     struct Node* root = new Node(1);
     root->left = new Node(2);
