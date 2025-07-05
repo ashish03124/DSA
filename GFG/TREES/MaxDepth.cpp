@@ -19,10 +19,16 @@ public:
 int MaxDepth(Node* root) {
     if (!root) return 0;
     int leftHand = MaxDepth(root->left);
+    if (leftHand == -1) return -1;
     int rightHand = MaxDepth(root->right);
+    if (rightHand == -1) return -1;
+    if (abs(leftHand-rightHand) > 1) return -1;
     return 1 + max(leftHand, rightHand);
-
 }
+bool check(Node* root) {
+    return MaxDepth(root) != -1;
+}
+
 int main() {
     struct Node* root = new Node(1);
     root->left = new Node(2);
@@ -33,8 +39,11 @@ int main() {
     root->right->right = new Node(7);
     root->right->right->left = new Node(8);
 
-    int result = MaxDepth(root);
-    cout << result << " -> ";
-    cout << "height\n" << endl;
+    if (check(root)) {
+        cout << "true";
+    }
+    else {
+        cout << "false";
+    }
     return 0;
 }
