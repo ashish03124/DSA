@@ -26,6 +26,7 @@ bool identity(Node* root1, Node* root2) {
     identity(root1->right, root2->right);
 }
 int main() {
+g
     struct Node* root1 = new Node(1);
     root1->left = new Node(2);
     root1->right = new Node(3);
