@@ -25,7 +25,6 @@ struct BSTNode {
     BSTNode(Student student) : data(student), left(nullptr), right(nullptr) {}
 };
 
-
 class StudentDatabase {
 private:
     BSTNode* root;
