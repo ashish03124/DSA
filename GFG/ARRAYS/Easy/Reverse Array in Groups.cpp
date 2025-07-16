@@ -1,6 +1,4 @@
-//
-// Created by Agaru on 7/14/2025.
-//
+
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
