@@ -31,7 +31,8 @@ void insert(int a[], int n)
             has[abs(a[i])][1] = 1;
     }
 }
-// Driver code
+
+
 int main()
 {
     int a[] = { -1, 9, -5, -8, -5, -2 };
