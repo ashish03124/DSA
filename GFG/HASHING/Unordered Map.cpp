@@ -14,7 +14,7 @@ int main() {
     for (int i=0;i<n;i++) {
         mp[arr[i]]++;
     }
-    //iterate int the map
+    //iterate in the map
     for ( auto it : mp) {
         cout << it.first << "->" << it.second << endl;
     }
