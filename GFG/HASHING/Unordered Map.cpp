@@ -1,6 +1,6 @@
 //
 // Created by Agaru on 7/20/2025.
-//Unordered map stores in Unsorted order
+//Unordered map stores in Unsorted
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
