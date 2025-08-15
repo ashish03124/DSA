@@ -22,3 +22,4 @@ int main() {
     cout << subsetsum(arr) << endl ;
     return 0;
 }
+//this is the problem of the dp
