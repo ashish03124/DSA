@@ -20,5 +20,8 @@ bool subsetsum(vector<int>& arr) {
 int main() {
     vector<int> arr = {1, 5, 11, 5};
     cout << subsetsum(arr) << endl ;
+    cout << subsetsum(arr) << endl ;
+
     return 0;
+
 }
