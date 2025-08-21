@@ -29,7 +29,7 @@ int Knapsack(int weight[], int value[], int C, int n) {
     }else if (weight[n-1]>C) {
      return dp[n][C] = Knapsack(weight, value, C, n-1);
     }
-    // choice diagram
+   
 
 
 
