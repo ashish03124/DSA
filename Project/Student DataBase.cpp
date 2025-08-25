@@ -60,7 +60,6 @@ private:
         }
     }
 
-    //inorder traversal (sorted order)
     void inorderHelper(BSTNode* node) {
         if (node != nullptr) {
             inorderHelper(node->left);
@@ -205,13 +204,10 @@ public:
         cout << "Student with Roll Number " << rollNumber << " deleted successfully!" << endl;
     }
 
-    // Check if database is empty
     bool isEmpty() {
         return root == nullptr;
     }
 };
-
-// Function to display menu
 void displayMenu() {
     cout << "\n========== Student Database Management System ==========" << endl;
     cout << "1. Insert Student Record" << endl;
@@ -228,7 +224,6 @@ int main() {
     StudentDatabase db;
     int choice;
 
-    // Sample data for testing
     cout << "Initializing database with sample data..." << endl;
     db.insertStudent(101, "Alice Johnson", "Computer Science", 3.8);
     db.insertStudent(95, "Bob Smith", "Mathematics", 3.6);
