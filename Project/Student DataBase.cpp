@@ -1,5 +1,4 @@
-//
-// Created by Agaru on 7/9/2025.
+
 //STUDENT DATABASE MANAGEMENT SYSTEM
 #include <iostream>
 #include <string>
@@ -16,7 +15,6 @@ struct Student {
     Student(int roll, string n, string c, float g) : rollNumber(roll), name(n), course(c), gpa(g) {}
 };
 
-// BST
 struct BSTNode {
     Student data;
     BSTNode* left;
@@ -29,7 +27,6 @@ class StudentDatabase {
 private:
     BSTNode* root;
 
-    //insert a student
     BSTNode* insertHelper(BSTNode* node, Student student) {
         if (node == nullptr) {
             return new BSTNode(student);
@@ -47,7 +44,6 @@ private:
         return node;
     }
 
-    //search for a student
     BSTNode* searchHelper(BSTNode* node, int rollNumber) {
         if (node == nullptr || node->data.rollNumber == rollNumber) {
             return node;
@@ -68,7 +64,6 @@ private:
         }
     }
 
-    //preorder traversal
     void preorderHelper(BSTNode* node) {
         if (node != nullptr) {
             displayStudent(node->data);
