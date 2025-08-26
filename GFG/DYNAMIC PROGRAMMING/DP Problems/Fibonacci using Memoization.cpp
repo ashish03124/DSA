@@ -1,29 +1,14 @@
-//
-// Created by Agaru on 8/26/2025.
-//
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-
-vector<int> arr;  // memoization array
-
-int fibbo(int n) {
-    if (arr[n] != -1) return arr[n];  // already computed
-
-    if (n == 0 || n == 1) return arr[n] = n;  // base case
-
-    arr[n] = fibbo(n-1) + fibbo(n-2);  // recursion + memoization
-    return arr[n];
+int f(int n, vector<int> &dp) {
+    if (n<=1) return n;
+    if (dp[n] != -1) return dp[n];
+    return dp[n] = f(n-1, dp) + f(n-2, dp);
 }
-
 int main() {
     int n;
     cin >> n;
-    arr.assign(n+1, -1);   // initialize memo array with -1
-
-    for (int i = 0; i < n; i++) {
-        cout << fibbo(i) << " ";  // print series
-    }
-    cout << endl;
-
+    vector<int> dp(n+1, -1);
+    cout << f(n, dp);
     return 0;
 }
