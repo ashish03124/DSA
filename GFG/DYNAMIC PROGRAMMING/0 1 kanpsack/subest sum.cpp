@@ -1,4 +1,6 @@
-
+/*
+*summing the subsets from the array
+*/
 #include<bits/stdc++.h>
 using namespace std;
 bool subsetsum(vector<int>& arr) {
