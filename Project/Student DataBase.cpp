@@ -80,7 +80,6 @@ private:
         return node;
     }
 
-    //delete a student
     BSTNode* deleteHelper(BSTNode* node, int rollNumber) {
         if (node == nullptr) {
             return node;
@@ -110,7 +109,6 @@ private:
         return node;
     }
 
-    //display student information
     void displayStudent(const Student& student) {
         cout << "| " << setw(4) << student.rollNumber
              << " | " << setw(20) << student.name
@@ -135,14 +133,12 @@ public:
         destroyTree(root);
     }
 
-    // Insert a student record
     void insertStudent(int rollNumber, string name, string course, float gpa) {
         Student newStudent(rollNumber, name, course, gpa);
         root = insertHelper(root, newStudent);
         cout << "Student with Roll Number " << rollNumber << " inserted successfully!" << endl;
     }
 
-    // Search for a student by roll number
     void searchStudent(int rollNumber) {
         BSTNode* result = searchHelper(root, rollNumber);
         if (result != nullptr) {
@@ -172,7 +168,6 @@ public:
         cout << "+------+----------------------+-----------------+------+" << endl;
     }
 
-    // Display all students in preorder traversal
     void displayPreorder() {
         if (root == nullptr) {
             cout << "No students in the database!" << endl;
