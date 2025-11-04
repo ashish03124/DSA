@@ -39,8 +39,8 @@
  *maxlength = 0;
  * use the Recursion + memoization
  */
-// #include <bits/stdc++.h>
-// using namespace std;
+#include <bits/stdc++.h>
+using namespace std;
 // bool solve(string s, int i, int j) {
 //     if (i >= j) {
 //         return true;
@@ -111,7 +111,10 @@
     ///
     /// if Len >= 2
     /// for(int i = 2; i<=n ;i++ ){
+    /// j = i + Len - 1;
+    /// if(s[i] == s[j] && Len == 2){
     ///
+    /// }
     /// }
 int main() {
     string s;
