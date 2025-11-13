@@ -17,7 +17,6 @@ public:
                 t[i][j] = max(1, minHealth);
             }
         }
-
         return t[0][0];
     }
 };
