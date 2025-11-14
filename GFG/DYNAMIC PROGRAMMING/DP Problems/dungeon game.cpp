@@ -15,8 +15,7 @@ public:
             for (int j = m - 1; j >= 0; j--) {
                 int minHealth = min(t[i + 1][j], t[i][j + 1]) - arr[i][j];
                 t[i][j] = max(1, minHealth);
-            }
-        }
+            } }
         return t[0][0];
     }
 };
