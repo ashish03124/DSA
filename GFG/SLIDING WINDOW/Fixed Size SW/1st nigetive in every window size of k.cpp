@@ -17,7 +17,6 @@ void FirstNegative(vector<int> arr, int k) {
         }
         }
     }
-
 }
 int main() {
     vector<int> arr = {1, 2, -2, -3, 5, 6, -7, 8, -4};
