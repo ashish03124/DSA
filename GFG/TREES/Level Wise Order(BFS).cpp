@@ -40,11 +40,9 @@ vector<vector<int>> levelWise(Node* root) {
 
     queue<Node*> Q;
     Q.push(root);
-
     while (!Q.empty()) {
         int size = Q.size();
         vector<int> level;
-
         for (int i = 0; i < size; i++) {
             Node* new_node = Q.front();
             Q.pop();
@@ -52,10 +50,8 @@ vector<vector<int>> levelWise(Node* root) {
             if (new_node->left) Q.push(new_node->left);
             if (new_node->right) Q.push(new_node->right);
         }
-
         arr.push_back(level);
     }
-
     return arr;
 }
 

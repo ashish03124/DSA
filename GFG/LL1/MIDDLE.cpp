@@ -21,7 +21,6 @@ void MIDDLE(Node* &head) {
         fast=fast->next->next;
     }
     cout << slow->data << endl;
-
 }
 int main() {
     Node* head = new Node(10);
